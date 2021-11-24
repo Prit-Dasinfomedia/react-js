@@ -1,51 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// setup vars
-const Books = [
-	{
-		id: "1",
-		Author: "james W. Williams",
-		Title: "How to Read People like a Book.",
-		image: " https://images-na.ssl-images-amazon.com/images/I/81eB%2B7%2BCkUL._Ac_UL200_SR200,200_.jpg",
-	},
-	{
-		id: "2",
-		Author: "Shannon elson",
-		Title: "Our class Family",
-		image: " https://images-na.ssl-images-amazon.com/images/I/71aLultW5EL._AC_UL200_SR200,200_.jpg",
+import App from './App';
+import reportWebVitals from './reportWebVitals';
 
-	}
-]
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
-// const names = [ 'Prit','Harshil', 'Ajay'];
-// const newNames = names.map((name) => {
-// 	return <h1>{name}</h1>;
-// }); 
-function Booklist() {
-	return (
-		<section>
-			{Books.map((book,index)=> {
-				// const { image, Title,Author} = book;
-				return <Book key={book.id} {... book}></Book>
-			})}
-		</section>
-	);
-}
-const Book = ({image, Title, Author }) => {
-	const clickHandler = () =>{
-		alert('hello');
-	}
-	// const { } = props.book;
-	return (
-		<article className="booklist">
-			<img src={image} alt="" />
-			<h1 onClick={() => console.log(Title)}>{Title}</h1>
-			<h4>{Author}</h4>
-			<button type="button" onClick={clickHandler}>Click</button>
-			
-		</article>
-	);
-}
-
-ReactDOM.render(<Booklist />, document.getElementById('root'));
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
