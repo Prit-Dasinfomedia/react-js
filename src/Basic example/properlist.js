@@ -4,13 +4,11 @@ import './index.css';
 // setup vars
 const Books = [
 	{
-		id: "1",
 		Author: "james W. Williams",
 		Title: "How to Read People like a Book.",
 		image: " https://images-na.ssl-images-amazon.com/images/I/81eB%2B7%2BCkUL._Ac_UL200_SR200,200_.jpg",
 	},
 	{
-		id: "2",
 		Author: "Shannon elson",
 		Title: "Our class Family",
 		image: " https://images-na.ssl-images-amazon.com/images/I/71aLultW5EL._AC_UL200_SR200,200_.jpg",
@@ -25,25 +23,21 @@ const Books = [
 function Booklist() {
 	return (
 		<section>
-			{Books.map((book,index)=> {
+			{Books.map((book)=> {
 				// const { image, Title,Author} = book;
-				return <Book key={book.id} {... book}></Book>
+				return <Book book={book}></Book>
 			})}
 		</section>
 	);
 }
-const Book = ({image, Title, Author }) => {
-	const clickHandler = () =>{
-		alert('hello');
-	}
-	// const { } = props.book;
+const Book = (props) => {
+	const { image, Title, Author, children } = props.book;
 	return (
 		<article className="booklist">
 			<img src={image} alt="" />
-			<h1 onClick={() => console.log(Title)}>{Title}</h1>
+			<h1>{Title}</h1>
 			<h4>{Author}</h4>
-			<button type="button" onClick={clickHandler}>Click</button>
-			
+			{children}
 		</article>
 	);
 }
