@@ -33,8 +33,12 @@ import React from  "react";
 
 //useReducer Example
 // import Setup from "./AdvanceReact Topics/6-useReducer/";
+
 //Pro drilling example
-import Setup from "./AdvanceReact Topics/7-Prop Drilling/1-prop-driling";
+// import Setup from "./AdvanceReact Topics/7-Prop Drilling/1-prop-driling";
+
+// context-api Example
+import Setup from "./AdvanceReact Topics/8-Context-api/1-context-api";
 
 
 import './App.css';
