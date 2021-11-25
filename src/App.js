@@ -32,7 +32,10 @@ import React from  "react";
 // import Setup from "./AdvanceReact Topics/5-useRef/1-useRef";
 
 //useReducer Example
-import Setup from "./AdvanceReact Topics/6-useReducer/";
+// import Setup from "./AdvanceReact Topics/6-useReducer/";
+//Pro drilling example
+import Setup from "./AdvanceReact Topics/7-Prop Drilling/1-prop-driling";
+
 
 import './App.css';
 
