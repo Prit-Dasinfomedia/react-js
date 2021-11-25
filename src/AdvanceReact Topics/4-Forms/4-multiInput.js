@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const ControllInput = () => {
+const MultiInput = () => {
 
     // const [fname, setFName] = useState('');
     // const [email, setEmail] = useState('');
@@ -68,4 +68,4 @@ const ControllInput = () => {
     )
 };
 
-export default ControllInput;
+export default MultiInput;

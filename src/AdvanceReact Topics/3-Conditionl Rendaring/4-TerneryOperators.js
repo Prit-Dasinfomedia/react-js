@@ -4,8 +4,6 @@ import React, { useEffect, useState } from "react";
 const TernerOperator = () => {
     const [text, setText] = useState('');
     const [isError, setIsError] = useState(false);
-    const fValue = text || "hello World";
-    const svalue = text && "hello World";
 
     return (
         <>
