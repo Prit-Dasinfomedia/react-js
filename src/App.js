@@ -57,13 +57,40 @@ import CartContainer from "./Redux/CartContainer";
 import Navbar from "./Redux/Navbar";
 import cartItems from "./cart-items";
 
-
 import './App.css';
+
+import {createStore} from 'redux';
+const initiaStore = {
+	count: 0
+};
+function reducer(state, action)
+{
+	console.log({state, action});
+	if(action.type === "DECREASE")
+	{	
+		return {count : state.count - 1};
+	}
+	if(action.type === "INCREASE")
+	{
+		return {count : state.count + 1};
+	}
+	if(action.type === "RESET")
+	{	
+		return {count : 0};
+	}
+	return state;
+}
+const store = createStore(reducer , initiaStore); 
+store.dispatch({type: 'DECREASE'})
+store.dispatch({type: 'INCREASE'})
+store.dispatch({type: 'RESET'})
+console.log (store.getState());
+
 
 function App() {
 	return (
 		<div className="container">
-			<Navbar />
+			<Navbar cart={store.getState()}/>
 			<CartContainer cart={cartItems} />
 		</div>
 	);
