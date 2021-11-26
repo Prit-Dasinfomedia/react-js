@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 
-const useFetch = () => {
+const Fetch = () => {
     const [loading, setLoading] = useState(true);
     const [products, setProducts] = useState([]);
     const getProducts = async () => {
@@ -17,4 +17,4 @@ const useFetch = () => {
 
 };
 
-export default useFetch;
+export default Fetch;
