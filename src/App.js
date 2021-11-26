@@ -47,7 +47,11 @@ import React from  "react";
 // import Setup from "./AdvanceReact Topics/10-prop-types";
 
 // react-router example
-import Setup from "./AdvanceReact Topics/11-react-router/";
+// import Setup from "./AdvanceReact Topics/11-react-router/";
+
+//USeMemo use Callback example
+import Setup from "./AdvanceReact Topics/12-useMemo/";
+
 
 import './App.css';
 
