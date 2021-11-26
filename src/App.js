@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import React from  "react";
+import React from "react";
 // useState example
 // import Setup from "./AdvanceReact Topics/1-useState/1-error-example";
 // import Setup from "./AdvanceReact Topics/1-useState/2-UseState-Basics";
@@ -50,7 +50,12 @@ import React from  "react";
 // import Setup from "./AdvanceReact Topics/11-react-router/";
 
 //USeMemo use Callback example
-import Setup from "./AdvanceReact Topics/12-useMemo/";
+// import Setup from "./AdvanceReact Topics/12-useMemo/";
+
+// Redux example
+import CartContainer from "./Redux/CartContainer";
+import Navbar from "./Redux/Navbar";
+import cartItems from "./cart-items";
 
 
 import './App.css';
@@ -58,9 +63,8 @@ import './App.css';
 function App() {
 	return (
 		<div className="container">
-			{/* <h2>advanced practical</h2> */}
-			<Setup />
-			
+			<Navbar />
+			<CartContainer cart={cartItems} />
 		</div>
 	);
 
